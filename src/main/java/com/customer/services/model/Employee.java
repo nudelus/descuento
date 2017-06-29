@@ -3,7 +3,7 @@ package com.customer.services.model;
 
 import java.time.LocalDate;
 
-public class Employee extends Customer{
+public class Employee extends Customer {
 
     private static final Double EMPLOYEE_DISCOUNT = 0.3D;
 

@@ -4,7 +4,6 @@ package com.customer.services.model;
 import com.customer.services.utils.RegularCustomerUtils;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class Customer {
 
@@ -30,7 +29,7 @@ public class Customer {
 
 
     public Double calculateDiscount() {
-        if(RegularCustomerUtils.isRegularCustomer(joinDate)) {
+        if (RegularCustomerUtils.isRegularCustomer(joinDate)) {
             return CUSTOMER_DISCOUNT;
         }
 

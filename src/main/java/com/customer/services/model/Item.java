@@ -3,8 +3,6 @@ package com.customer.services.model;
 
 public class Item {
 
-    private String itemId;
-
     private ItemType itemType;
 
     private Integer quantity;
@@ -12,35 +10,22 @@ public class Item {
     private Double price;
 
 
-    public String getItemId() {
-        return itemId;
-    }
-
-    public void setItemId(String itemId) {
-        this.itemId = itemId;
+    public Item(ItemType itemType, Integer quantity, Double price) {
+        this.itemType = itemType;
+        this.quantity = quantity;
+        this.price = price;
     }
 
     public ItemType getItemType() {
         return itemType;
     }
 
-    public void setItemType(ItemType itemType) {
-        this.itemType = itemType;
-    }
-
     public Integer getQuantity() {
         return quantity;
-    }
-
-    public void setQuantity(Integer quantity) {
-        this.quantity = quantity;
     }
 
     public Double getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
-        this.price = price;
-    }
 }
