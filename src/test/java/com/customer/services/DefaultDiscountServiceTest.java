@@ -38,6 +38,10 @@ public class DefaultDiscountServiceTest {
     }
 
 
+    @Test(expected = IllegalArgumentException.class)
+    public void testIllegalExcetion() {
+        defaultDiscountService.calculateFinalPrize(null,itemList);
+    }
     @Test
     public void testCalculateFinalPrizeNormal() {
 
@@ -105,7 +109,6 @@ public class DefaultDiscountServiceTest {
         assertFalse(RegularCustomerUtils.isRegularCustomer(LocalDate.of(2017, 02, 02)));
         assertTrue(RegularCustomerUtils.isRegularCustomer(LocalDate.of(2015, 06, 28)));
     }
-
 
     private List<Item> createItemList() {
         List<Item> items = new ArrayList<>();
